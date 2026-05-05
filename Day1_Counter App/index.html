@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        height: 100vh;
+        background-color: #f4f5f7;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e565c;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        gap: 20px;
+      }
+
+      #display {
+        font-size: 80px;
+        color: #1e565c;
+        background-color: #ffffff;
+        padding: 20px 60px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      button:hover {    
+        transform: scale(1.05);
+      }
+
+      #increment {
+        background-color: #8ae39e;
+        color: #1e565c;
+      }
+
+      #decrement {
+        background-color: #e56b6b;
+        color: #ffffff;
+      }
+
+      #reset {
+        background-color: #d1d5db;
+        color: #1e565c;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1 id="display">0</h1>
+
+      <div class="buttons">
+        <button id="decrement">Decrement</button>
+        <button id="increment">Increment</button>
+      </div>
+      <button id="reset">Reset</button>
+    </div>
+
+    <script>
+      let count = 0;
+      const display = document.getElementById("display");
+
+      const decrementButton = document.getElementById("decrement");
+      const incrementButton = document.getElementById("increment");
+
+      const reset = document.getElementById("reset");
+
+      incrementButton.addEventListener("click", function () {
+        count++;
+        display.textContent = count;
+      });
+
+      decrementButton.addEventListener("click", function () {
+        if (count > 0) {
+          count--;
+        }
+        display.textContent = count;
+      });
+
+      reset.addEventListener("click", function () {
+        count = 0;
+        display.textContent = count;
+      });
+    </script>
+  </body>
+</html>
