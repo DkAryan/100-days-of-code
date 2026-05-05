@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <style>
+        /* Basic Reset - Taaki sabhi browsers mein design same dikhe */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background aur app ko center mein laane ke liye */
+body {
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main App Container (Ek white card jaisa design) */
+main {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Heading ki styling */
+#heading h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input aur Add Button ko ek line mein laane ke liye Flexbox */
+.main {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#inputbox {
+  flex: 1; /* Input field bachi hui saari jagah le lega */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Jab input par click ho toh border color change ho */
+#inputbox:focus {
+  border-color: #007bff;
+}
+
+/* Add Button ka design */
+#btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #0056b3;
+}
+
+/* Task List ki styling */
+.tasks {
+  list-style: none; /* Bullets hatane ke liye */
+}
+
+/* Har ek single task ka design */
+.tasks li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* Text left mein, button right mein */
+  align-items: center;
+  border-left: 4px solid #007bff; /* Ek accha sa side border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Delete Button ka design */
+.tasks li button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.tasks li button:hover {
+  background-color: #c82333;
+}
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="heading">
+        <h1>My To-Do List</h1>
+      </div>
+      <div class="main">
+        <input id="inputbox" type="text" />
+        <button id="btn">Add</button>
+      </div>
+      <ul class="tasks"></ul>
+    </main>
+    <script>
+      let task = document.querySelector("#inputbox");
+      let button = document.querySelector("#btn");
+      let alltask = document.querySelector(".tasks");
+
+      button.addEventListener("click", function () {
+        if (task.value === "") {
+          alert("Please Enter Task");
+        } else {
+          let li = document.createElement("li");
+          li.innerText = task.value;
+
+          let delet= document.createElement("Button");
+          delet.innerText = "delete";
+            delet.addEventListener("click", function (){
+                li.remove();
+            });
+
+
+          alltask.appendChild(li);
+          li.appendChild(delet);
+          task.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
