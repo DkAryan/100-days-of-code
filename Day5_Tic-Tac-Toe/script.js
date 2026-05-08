@@ -10,7 +10,7 @@ const winPatterns = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 let currentPlayer = "X";
@@ -41,29 +41,42 @@ function handleClick(e) {
   checkWinner();
 
   if (gameOver === false) {
-  if (currentPlayer === "X") {
-    currentPlayer = "O";
-  } else {
-    currentPlayer = "X";
+    if (currentPlayer === "X") {
+      currentPlayer = "O";
+    } else {
+      currentPlayer = "X";
+    }
+
+    status.innerText = "Player " + currentPlayer + "'s Turn";
   }
-
-status.innerText = "Player " + currentPlayer + "'s Turn";
-
-}
 }
 
 function checkWinner() {
-   for (let i = 0; i < winPatterns.length; i++) {
-     let a = winPatterns[i][0];
+  for (let i = 0; i < winPatterns.length; i++) {
+    let a = winPatterns[i][0];
     let b = winPatterns[i][1];
     let c = winPatterns[i][2];
 
-   if (board[a] !== "" && board[a] === board[b] && board[a] === board[c]) {
+    if (board[a] !== "" && board[a] === board[b] && board[a] === board[c]) {
       status.innerText = "Player " + board[a] + " Wins! 🎉";
       gameOver = true;
       return;
     }
-   }
+  }
+  if (board.includes("") === false) {
+    gameOver = true;
+    status.innerText = "Game Draw";
+  }
 }
 
-
+reset.addEventListener("click", function () {
+  currentPlayer = "X";
+  board = ["", "", "", "", "", "", "", "", ""];
+  console.log(board);
+  gameOver = false;
+  for (let index = 0; index < cells.length; index++) {
+    cells[index].innerText = "";
+  }
+  console.log(cells);
+  status.innerText = "Player X's Turn";
+});
