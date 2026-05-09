@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.score-board {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.score-board h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.score-board span {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#question {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.option button {
+    background-color: rgba(102, 126, 234, 0.8);
+    color: white;
+    border: 2px solid #667eea;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.option button:hover {
+    background-color: #667eea;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.option button:active {
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    background-color: #764ba2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #5a3680;
+    box-shadow: 0 5px 20px rgba(118, 75, 162, 0.4);
+    transform: translateY(-2px);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
