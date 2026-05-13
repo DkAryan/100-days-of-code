@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div id="display">
+            <input type="text" id="output-display" readonly >
+            <button id="copy-btn">Copy</button>
+        </div>
+        <div class="setting">
+            <input type="checkbox" id="upperCase">
+            <label for="upperCase">Include-UpperCase</label>
+
+            <input type="checkbox" id="lowerCase">
+            <label for="lowerCase">Include-LowerCase</label>
+
+            <input type="checkbox" id="number">
+            <label for="number">Include-Number</label>
+
+            <input type="checkbox" id="symbol">
+            <label for="symbol">Include-symbol</label>
+
+            <input type="number" id="passwordLength" placeholder="Password Length" value="8" min="4" max="12">
+        </div>
+
+        <div class="buttons">
+            <button id="generate-Pass">Generate Password</button>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
