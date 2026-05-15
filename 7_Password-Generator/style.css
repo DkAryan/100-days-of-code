@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.main {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 90%;
+  max-width: 380px;
+}
+
+.main::before {
+  content: "Password Generator";
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+/* Display Section */
+#display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+#output-display {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: "Courier New", monospace;
+  transition: border-color 0.2s ease;
+}
+
+#output-display:focus {
+  outline: none;
+  border-color: #333;
+  background-color: #fff;
+}
+
+#copy-btn {
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+#copy-btn:hover {
+  background-color: #555;
+}
+
+#copy-btn:active {
+  background-color: #222;
+}
+
+/* Settings Section */
+.setting {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+
+.setting label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.setting label:hover {
+  color: #333;
+}
+
+.setting input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #333;
+}
+
+#passwordLength {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #333;
+  transition: border-color 0.2s ease;
+}
+
+#passwordLength:focus {
+  outline: none;
+  border-color: #333;
+  background-color: #fff;
+}
+
+#passwordLength::placeholder {
+  color: #999;
+}
+
+/* Buttons Section */
+.buttons {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#generate-Pass {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#generate-Pass:hover {
+  background-color: #555;
+}
+
+#generate-Pass:active {
+  background-color: #222;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .main {
+    padding: 28px;
+    gap: 20px;
+  }
+
+  .main::before {
+    font-size: 20px;
+  }
+
+  #output-display {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .setting label {
+    font-size: 13px;
+  }
+
+  #generate-Pass {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
