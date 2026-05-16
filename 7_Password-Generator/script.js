@@ -59,3 +59,12 @@ generatepass.addEventListener("click", function () {
   }
   display.value = password;
 });
+
+copyBtn.addEventListener("click", function () {
+  if(display.value === ""){
+    alert("Please Generate Password")
+  } else{
+     navigator.clipboard.writeText(display.value);
+     alert("Password Copyied");
+  }
+})
