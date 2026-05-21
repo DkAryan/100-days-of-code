@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Browser ko batata hai ye HTML5 file hai -->
+<html lang="en"> <!-- Page language English set kar rahe hain -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Character encoding set -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Mobile responsive banata hai -->
+    <title>Weather App</title> <!-- Browser tab ka title -->
+
+    <!-- CSS file link kar rahe hain -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main container (poore app ko center karne ke liye) -->
+    <div class="container">
+      
+      <!-- App title -->
+      <h1 class="title">🌦 Weather App</h1>
+
+      <!-- Search box area -->
+      <div class="search-box">
+        
+        <!-- Input box city name ke liye -->
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name..."
+        />
+
+        <!-- Search button -->
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <!-- Weather result card -->
+      <div class="weather-card" id="weatherResult">
+        
+        <!-- Default message -->
+        <p class="default-text">Enter a city name to get weather info ☁️</p>
+
+      </div>
+    </div>
+
+    <!-- JS file link (abhi empty bhi ho sakta hai) -->
+    <script src="script.js"></script>
+  </body>
+</html>

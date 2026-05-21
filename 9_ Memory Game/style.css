@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* 4x4 Grid Board */
+.memory-game {
+    width: 640px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    perspective: 1000px; /* 3D effect ke liye */
+}
+
+/* Base Card Style */
+.memory-card {
+    background-color: #2e2e2e;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Card par click hone par ye class JS se add hogi */
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+/* Front aur Back faces ki common styling */
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    backface-visibility: hidden; /* Peeche ka hissa chhupane ke liye */
+}
+
+/* Front Face (Fruit Emoji) - Shuru mein ulta rahega */
+.front-face {
+    background: #34495e;
+    transform: rotateY(180deg);
+}
+
+/* Back Face (Question Mark) - Shuru mein ye dikhega */
+.back-face {
+    background: #e74c3c;
+}

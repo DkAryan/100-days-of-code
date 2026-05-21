@@ -1,0 +1,104 @@
+/* Universal styling (margin padding reset) */
+* {
+  margin: 0; /* Default margin remove */
+  padding: 0; /* Default padding remove */
+  box-sizing: border-box; /* Width calculation easy banata hai */
+  font-family: Arial, sans-serif; /* Default font set */
+}
+
+/* Body styling */
+body {
+  height: 100vh; /* Full screen height */
+  display: flex; /* Center layout banane ke liye */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  background: linear-gradient(to right, #74ebd5, #acb6e5); /* Background gradient */
+}
+
+/* Main container */
+.container {
+  width: 90%; /* Mobile ke liye flexible width */
+  max-width: 400px; /* Desktop pe fixed max size */
+  background: white; /* Card background white */
+  padding: 20px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  text-align: center; /* Center text */
+}
+
+/* Title styling */
+.title {
+  font-size: 28px; /* Heading size */
+  margin-bottom: 20px; /* Space below title */
+  color: #333; /* Dark text */
+}
+
+/* Search box layout */
+.search-box {
+  display: flex; /* Input aur button ek line me */
+  gap: 10px; /* Input aur button ke beech space */
+  margin-bottom: 20px; /* Space below search box */
+}
+
+/* Input styling */
+#cityInput {
+  flex: 1; /* Input ko full available width dena */
+  padding: 12px; /* Input padding */
+  border: 2px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded edges */
+  font-size: 16px; /* Text size */
+  outline: none; /* Default outline remove */
+}
+
+/* Input focus effect */
+#cityInput:focus {
+  border-color: #74b9ff; /* Focus pe border blue */
+}
+
+/* Button styling */
+#searchBtn {
+  padding: 12px 15px; /* Button padding */
+  border: none; /* Border remove */
+  background: #0984e3; /* Blue button */
+  color: white; /* Text white */
+  font-size: 16px; /* Button text size */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Hover pe pointer */
+  transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+#searchBtn:hover {
+  background: #0652dd; /* Hover pe dark blue */
+}
+
+/* Weather card styling */
+.weather-card {
+  background: #f1f2f6; /* Light gray background */
+  padding: 20px; /* Inner spacing */
+  border-radius: 12px; /* Rounded corners */
+  min-height: 150px; /* Minimum height fixed */
+  display: flex; /* Center text inside */
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+}
+
+/* Default text styling */
+.default-text {
+  font-size: 16px; /* Text size */
+  color: #555; /* Light dark text */
+}
+
+/* Weather result text (future JS output) */
+.weather-card h2 {
+  font-size: 24px; /* City name size */
+  margin-bottom: 10px; /* Space below */
+  color: #2d3436; /* Dark text */
+}
+
+/* Weather info paragraphs */
+.weather-card p {
+  font-size: 16px; /* Info text size */
+  margin: 6px 0; /* Spacing */
+  color: #2d3436; /* Text color */
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <h1>🍽️ Recipe Finder</h1>
+      <form id="search-form">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Enter an ingredient or dish (e.g., chicken)..." 
+          required
+        >
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <!-- Your JS will inject the recipe cards inside this div -->
+      <div id="recipes-container" class="recipes-grid">
+        <p class="placeholder-text">Search for a recipe to get started!</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

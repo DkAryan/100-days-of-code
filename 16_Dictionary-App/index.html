@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dictionary-card">
+      <h1>Dictionary App</h1>
+      <div class="search-box">
+        <!-- ID isliye diye hain taaki tum inhe JS me easily target kar sako -->
+        <input type="text" id="word-input" placeholder="Enter a word..." />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <!-- Yahan par hum JS ke through API ka data inject karenge -->
+      <div id="result-container" class="result">
+        <!-- Initial state me ye khali rahega -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

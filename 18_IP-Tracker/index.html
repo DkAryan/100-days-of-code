@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IP Address Tracker</h1>
+        
+        <div class="search-box">
+            <input type="text" id="ip-input" placeholder="Enter any IP address (e.g., 8.8.8.8)">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Ye loading message default hidden rahega -->
+        <p id="loading-message" class="hidden">Fetching details... Please wait.</p>
+
+        <div class="results-card">
+            <div class="result-item">
+                <p class="label">IP ADDRESS</p>
+                <h2 id="ip-display">-</h2>
+            </div>
+            <div class="result-item">
+                <p class="label">LOCATION</p>
+                <h2 id="location-display">-</h2>
+            </div>
+            <div class="result-item">
+                <p class="label">TIMEZONE</p>
+                <h2 id="timezone-display">-</h2>
+            </div>
+            <div class="result-item">
+                <p class="label">ISP</p>
+                <h2 id="isp-display">-</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header>
+            <h1>🍿 Movie Info App</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Enter movie name...">
+                <button id="search-btn">Search</button>
+            </div>
+        </header>
+
+        <!-- Yahan par aapki JS se movie data aayega -->
+        <main id="movie-container" class="movie-container">
+            <!-- Ek dummy layout kaisa dikhega, aap isko JS se create kar sakte hain -->
+            <div class="movie-card hidden" id="movie-card">
+                <div class="movie-poster">
+                    <img id="poster-img" src="" alt="Movie Poster">
+                </div>
+                <div class="movie-details">
+                    <h2 id="movie-title">Movie Title</h2>
+                    <p class="movie-meta"><span id="movie-year">Year</span> | <span id="movie-rating">⭐ Rating</span></p>
+                    <p class="movie-genre" id="movie-genre">Action, Drama</p>
+                    <div class="movie-plot">
+                        <h3>Plot:</h3>
+                        <p id="movie-desc">Movie ka description yahan aayega...</p>
+                    </div>
+                    <div class="movie-cast">
+                        <h3>Cast:</h3>
+                        <p id="movie-actors">Actors ke naam yahan aayenge...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error-message hidden">
+                Movie not found! Please try again.
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
